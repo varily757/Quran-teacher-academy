@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Teacher | للنساء والأطفال</title>
+    <!-- استدعاء Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- استدعاء خط الأميري (للعناوين والطابع الإسلامي) وخط تجوال (للنصوص) -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- استدعاء أيقونات Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        /* تخصيص كلاس للخط الإسلامي */
+        .font-islamic {
+            font-family: 'Amiri', serif;
+        }
+        h1, h2, h3, .logo-text {
+            font-family: 'Amiri', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #059669, #d97706); /* زمردي إلى ذهبي */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- شريط التنقل -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- الشعار -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div class="bg-emerald-600 text-white p-2 rounded-lg">
+                        <i data-lucide="book-heart" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-bold text-3xl text-gray-900 logo-text">Quran <span class="text-emerald-600">Teacher</span></span>
+                </div>
+                
+                <!-- القائمة للشاشات الكبيرة -->
+                <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                    <a href="#home" class="text-gray-600 hover:text-emerald-600 font-medium transition font-islamic text-lg">الرئيسية</a>
+                    <a href="#about-teacher" class="text-gray-600 hover:text-emerald-600 font-medium transition font-islamic text-lg">عن المعلمة</a>
+                    <a href="#programs" class="text-gray-600 hover:text-emerald-600 font-medium transition font-islamic text-lg">حلقات الذكر</a>
+                    <a href="#contact" class="bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition shadow-lg hover:shadow-emerald-500/30 font-bold font-islamic">تواصلي معنا</a>
+                </div>
+
+                <!-- زر القائمة للموبايل -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- القائمة المنسدلة للموبايل -->
+        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-1 font-islamic">
+                <a href="#home" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">الرئيسية</a>
+                <a href="#about-teacher" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">عن المعلمة</a>
+                <a href="#programs" class="block px-3 py-2 rounded-md text-lg font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50">حلقات الذكر</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-lg font-medium text-emerald-600 font-bold hover:bg-emerald-50">تواصلي معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="font-islamic text-2xl text-emerald-700 block mb-4">﷽</span>
+                
+                <div class="inline-block px-4 py-2 mb-6 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 font-islamic text-lg shadow-sm">
+                    قال ﷺ: "خيركم من تعلم القرآن وعلمه"
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gray-900 font-islamic">
+                    احفظي ورتلي قرآن مع <br>
+                    <span class="gradient-text">Quran Teacher</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed font-islamic">
+                    "ورتل القرآن ترتيلاً"<br>
+                    <span class="text-base font-sans text-gray-500 mt-2 block">دروس أونلاين خاصة للماجدات والأطفال في رحاب القرآن الكريم، التجويد، والقاعدة النورانية.</span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="document.getElementById('contact').scrollIntoView()" class="px-8 py-4 bg-emerald-600 text-white rounded-full font-bold text-xl font-islamic hover:bg-emerald-700 transition shadow-lg hover:shadow-emerald-500/40 flex items-center justify-center gap-2">
+                        ابدئي رحلتك القرآنية <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </button>
+                    <a href="#about-teacher" class="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-bold text-xl font-islamic hover:bg-gray-50 transition flex items-center justify-center gap-2">
+                        تعرفي على المعلمة <i data-lucide="user" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- خلفية زخرفية بسيطة -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 opacity-20">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-200 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-amber-100 rounded-full blur-3xl"></div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-islamic">لماذا Quran Teacher؟</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto font-islamic text-xl">نهج نبوي في التعليم، وبيئة آمنة ومريحة.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- ميزة 1 -->
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-emerald-50 transition duration-300 border border-gray-100 hover:border-emerald-100 group text-center">
+                    <div class="w-16 h-16 mx-auto bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 font-islamic">إجازة بالسند المتصل</h3>
+                    <p class="text-gray-600 leading-relaxed font-islamic text-lg">تلقي القرآن غضاً طرياً كما أنزل، على يد معلمة مجازة بالسند المتصل إلى رسول الله ﷺ.</p>
+                </div>
+
+                <!-- ميزة 2 -->
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-amber-50 transition duration-300 border border-gray-100 hover:border-amber-100 group text-center">
+                    <div class="w-16 h-16 mx-auto bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 font-islamic">خصوصية تامة</h3>
+                    <p class="text-gray-600 leading-relaxed font-islamic text-lg">بيئة تعليمية شرعية مخصصة للأخوات والأطفال، تراعي الضوابط الشرعية والخصوصية.</p>
+                </div>
+
+                <!-- ميزة 3 -->
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-blue-50 transition duration-300 border border-gray-100 hover:border-blue-100 group text-center">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i data-lucide="sun" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900 font-islamic">بركة الوقت</h3>
+                    <p class="text-gray-600 leading-relaxed font-islamic text-lg">مواعيد مرنة تعينك على استغلال وقتك في طاعة الله وحفظ كتابه دون عناء التنقل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تعريف المعلمة الجديد (تم إضافته هنا) -->
+    <section id="about-teacher" class="py-20 bg-emerald-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-emerald-100">
+                <!-- رأس الكارت -->
+                <div class="bg-emerald-700 p-6 text-center relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
+                    <h2 class="text-3xl font-bold text-white font-islamic mb-2 relative z-10">🌿✨ التعريف بالمعلمة ✨🌿</h2>
+                </div>
+                
+                <div class="p-8 md:p-12 text-center">
+                    <!-- صورة رمزية أو أيقونة -->
+                    <div class="w-28 h-28 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-md -mt-16 relative z-10">
+                        <i data-lucide="user-check" class="w-14 h-14 text-emerald-600"></i>
+                    </div>
+                    
+                    <!-- الاسم واللقب -->
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 font-islamic mb-3">أ. مها صبري عثمان خليل</h3>
+                    <p class="text-emerald-700 font-bold mb-8 text-lg md:text-xl font-islamic bg-emerald-50 inline-block px-4 py-2 rounded-lg">
+                        مديرة أكاديمية نور وبرهان لتعليم القرآن وعلوم السنة النبوية الشريفة
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 text-right mb-10">
+                        <!-- عمود الإجازات -->
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition duration-300">
+                            <h4 class="font-bold text-2xl text-emerald-800 font-islamic mb-6 flex items-center gap-2 border-b pb-3 border-emerald-200">
+                                <i data-lucide="scroll" class="w-6 h-6"></i> الإجازات والمؤهلات
+                            </h4>
+                            <ul class="space-y-4 text-gray-700 font-islamic text-lg leading-relaxed">
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mt-1 shrink-0"></i> مجازة في قراءة الإمام عاصم بروايتي شعبة وحفص</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mt-1 shrink-0"></i> مجازة في متن تحفة الأطفال</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mt-1 shrink-0"></i> مجازة في متن الجزرية</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mt-1 shrink-0"></i> مجازة في كتاب تيسير الرحمن</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 mt-1 shrink-0"></i> مجازة في القاعدة النورانية ونور البيان</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- عمود الخبرة -->
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition duration-300">
+                            <h4 class="font-bold text-2xl text-emerald-800 font-islamic mb-6 flex items-center gap-2 border-b pb-3 border-emerald-200">
+                                <i data-lucide="briefcase" class="w-6 h-6"></i> الخبرة والمنهجية
+                            </h4>
+                            <ul class="space-y-4 text-gray-700 font-islamic text-lg leading-relaxed">
+                                <li class="flex items-start gap-3"><i data-lucide="star" class="w-5 h-5 text-amber-500 mt-1 shrink-0"></i> معلمة قرآن كريم وتجويد وعلوم شرعية للنساء والأطفال.</li>
+                                <li class="flex items-start gap-3"><i data-lucide="star" class="w-5 h-5 text-amber-500 mt-1 shrink-0"></i> خبرة خمس سنوات في التعليم عن بُعد.</li>
+                                <li class="flex items-start gap-3"><i data-lucide="star" class="w-5 h-5 text-amber-500 mt-1 shrink-0"></i> استخدام أحدث الوسائل التعليمية الحديثة لضمان الفهم والتفاعل.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- الدعاء الختامي -->
+                    <div class="inline-block px-8 py-4 bg-gradient-to-r from-emerald-50 to-white rounded-full border border-emerald-200 shadow-sm">
+                        <p class="text-emerald-800 font-islamic text-xl md:text-2xl">🌸 "نسأل الله أن يجعل القرآن العظيم ربيع قلوبنا ونور صدورنا" 🌸</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المسارات (Programs) -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-2 font-islamic">حلقات الذكر والتعليم</h2>
+                    <p class="text-gray-600 font-islamic text-lg">اختر المسار الذي يناسبك لنيل الأجر والثواب.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- كارت مسار 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-emerald-500">
+                    <div class="h-32 bg-white rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="book-open-check" class="w-12 h-12 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 font-islamic text-emerald-800">تصحيح التلاوة</h3>
+                    <p class="text-base text-gray-600 mb-4 font-islamic">إتقان مخارج الحروف وصفاتها وتلاوة القرآن حق تلاوته.</p>
+                    <span class="text-emerald-600 text-sm font-bold cursor-pointer font-islamic">التفاصيل &larr;</span>
+                </div>
+                
+                <!-- كارت مسار 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-amber-500">
+                    <div class="h-32 bg-white rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="brain-circuit" class="w-12 h-12 text-amber-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 font-islamic text-amber-800">الحفظ والمراجعة</h3>
+                    <p class="text-base text-gray-600 mb-4 font-islamic">"تعاهدوا القرآن" - خطط للحفظ الجديد والمراجعة لتثبيت الحفظ في الصدور.</p>
+                    <span class="text-amber-600 text-sm font-bold cursor-pointer font-islamic">التفاصيل &larr;</span>
+                </div>
+
+                <!-- كارت مسار 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-pink-500">
+                    <div class="h-32 bg-white rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="baby" class="w-12 h-12 text-pink-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 font-islamic text-pink-800">غراس الجنة (للأطفال)</h3>
+                    <p class="text-base text-gray-600 mb-4 font-islamic">تأسيس النشء على محبة القرآن وقراءته بمنهج نور البيان.</p>
+                    <span class="text-pink-600 text-sm font-bold cursor-pointer font-islamic">التفاصيل &larr;</span>
+                </div>
+
+                <!-- كارت مسار 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition border-t-4 border-purple-500">
+                    <div class="h-32 bg-white rounded-lg mb-4 flex items-center justify-center">
+                        <i data-lucide="scroll" class="w-12 h-12 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 font-islamic text-purple-800">الإجازة القرآنية</h3>
+                    <p class="text-base text-gray-600 mb-4 font-islamic">للمتقنات: نيل شرف السند المتصل برسول الله ﷺ.</p>
+                    <span class="text-purple-600 text-sm font-bold cursor-pointer font-islamic">التفاصيل &larr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تواصل معنا -->
+    <section id="contact" class="py-20 bg-emerald-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl border border-emerald-100 overflow-hidden flex flex-col md:flex-row shadow-lg">
+                
+                <!-- معلومات الاتصال -->
+                <div class="bg-emerald-800 p-10 text-white md:w-2/5 flex flex-col justify-between relative overflow-hidden">
+                    <!-- زخرفة خفيفة -->
+                    <div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+                        <i data-lucide="flower" class="absolute top-4 right-4 w-20 h-20"></i>
+                        <i data-lucide="flower" class="absolute bottom-4 left-4 w-20 h-20"></i>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-6 font-islamic">تواصلي مع المعلمة</h3>
+                        <p class="text-emerald-100 mb-8 font-islamic text-lg">نسعد بخدمتكم والرد على استفساراتكم، وجعلنا الله وإياكم من أهل القرآن.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-emerald-700 p-2 rounded-lg"><i data-lucide="phone" class="w-5 h-5 text-emerald-100"></i></div>
+                                <span dir="ltr" class="font-bold text-lg">+20 120 160 6310</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="bg-emerald-700 p-2 rounded-lg"><i data-lucide="mail" class="w-5 h-5 text-emerald-100"></i></div>
+                                <span class="text-sm font-sans">omaisha23888@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="bg-emerald-700 p-2 rounded-lg"><i data-lucide="message-circle" class="w-5 h-5 text-emerald-100"></i></div>
+                                <span class="font-islamic">تواصل مباشر واتساب</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 flex gap-4 relative z-10">
+                        <a href="#" class="p-2 bg-emerald-700 rounded-full hover:bg-emerald-600 transition border border-emerald-600"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-2 bg-emerald-700 rounded-full hover:bg-emerald-600 transition border border-emerald-600"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- نموذج الاتصال -->
+                <div class="p-10 md:w-3/5 bg-white">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-islamic text-emerald-800">حجز موعد</h3>
+                    <form onsubmit="event.preventDefault(); alert('جزاكم الله خيراً! تم استلام الطلب وسيتم التواصل معكم قريباً.');" class="space-y-4">
+                        <div>
+                            <label class="block text-lg font-medium text-gray-700 mb-1 font-islamic">الاسم الكريم</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" placeholder="أم عبد الله...">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-medium text-gray-700 mb-1 font-islamic">رقم الواتساب</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none transition" placeholder="01xxxxxxxxx">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-medium text-gray-700 mb-1 font-islamic">البرنامج المطلوب</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none transition font-islamic text-gray-700">
+                                <option>غراس الجنة (تحفيظ أطفال)</option>
+                                <option>حفظ ومراجعة (نساء)</option>
+                                <option>تصحيح تلاوة</option>
+                                <option>طلب إجازة</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-700 text-white font-bold py-3 rounded-lg hover:bg-emerald-800 transition duration-300 flex justify-center gap-2 font-islamic text-xl shadow-md hover:shadow-lg">
+                            إرسال الطلب <i data-lucide="send" class="w-5 h-5 mt-1"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <i data-lucide="book-heart" class="w-8 h-8 text-emerald-500"></i>
+                <span class="font-bold text-3xl font-islamic">Quran <span class="text-emerald-500">Teacher</span></span>
+            </div>
+            <p class="text-emerald-100 mb-2 font-islamic text-xl">اللهم اجعل القرآن العظيم ربيع قلوبنا ونور صدورنا.</p>
+            <p class="text-gray-400 mb-8 font-islamic">تعليم القرآن الكريم للنساء والأطفال - أونلاين.</p>
+            <p class="text-gray-600 text-sm font-sans">&copy; 2023 Quran Teacher. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // تهيئة أيقونات Lucide
+        lucide.createIcons();
+
+        // تفعيل القائمة في الموبايل
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // تغيير خلفية البار العلوي عند التمرير
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.add('bg-opacity-95');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.remove('bg-opacity-95');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
